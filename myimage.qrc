@@ -1,0 +1,19 @@
+<RCC>
+    <qresource prefix="/myimage">
+        <file>image/汤加丽0.jpg</file>
+        <file>image/汤加丽1.jpg</file>
+        <file>image/汤加丽2.jpg</file>
+        <file>image/汤加丽3.jpg</file>
+        <file>image/汤加丽4.jpg</file>
+        <file>image/汤加丽5.jpg</file>
+        <file>image/汤加丽6.jpg</file>
+        <file>image/汤加丽11.jpg</file>
+        <file>image/汤加丽12.jpg</file>
+        <file>image/汤加丽18.jpg</file>
+        <file>image/汤加丽19.jpg</file>
+        <file>image/汤加丽22.jpg</file>
+        <file>image/汤加丽23.jpg</file>
+        <file>image/汤加丽24.jpg</file>
+        <file>image/汤加丽226.jpg</file>
+    </qresource>
+</RCC>

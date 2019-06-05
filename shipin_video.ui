@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ShiPin_video</class>
+ <widget class="QWidget" name="ShiPin_video">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>616</width>
+    <height>397</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QWidget" name="widget" native="true"/>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_controller" native="true">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>32</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>32</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QWidget#widget_controller
+{
+	background-color: rgba(0, 255, 0, 100);
+}</string>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="pushButton_open">
+            <property name="text">
+             <string>打开视频</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_play">
+            <property name="text">
+             <string>播放</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_pause">
+            <property name="text">
+             <string>暂停</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_stop">
+            <property name="text">
+             <string>停止</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSlider" name="horizontalSlider">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_4">
+            <item>
+             <widget class="QLabel" name="label_currenttime">
+              <property name="text">
+               <string>00:00:00</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_3">
+              <property name="text">
+               <string>/</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_totaltime">
+              <property name="text">
+               <string>00:00:00</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QListWidget" name="listWidget">
+       <item>
+        <property name="text">
+         <string>文件列表</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

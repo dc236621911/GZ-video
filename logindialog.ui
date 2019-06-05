@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LoginDialog</class>
+ <widget class="QDialog" name="LoginDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>350</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>高考视频处理软件</string>
+  </property>
+  <widget class="QDialogButtonBox" name="buttonLogin">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>280</y>
+     <width>156</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <property name="standardButtons">
+    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_title">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>70</y>
+     <width>180</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>微软雅黑</family>
+     <pointsize>16</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;高考视频&lt;span style=&quot; font-size:18pt; color:#00aaff;&quot;&gt;处理软件&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="toolButton">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>20</y>
+     <width>61</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string>URL配置</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>130</y>
+     <width>311</width>
+     <height>47</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <property name="topMargin">
+     <number>10</number>
+    </property>
+    <property name="bottomMargin">
+     <number>10</number>
+    </property>
+    <item>
+     <widget class="QLabel" name="label">
+      <property name="font">
+       <font>
+        <family>微软雅黑</family>
+        <pointsize>12</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 12pt &quot;微软雅黑&quot;;</string>
+      </property>
+      <property name="text">
+       <string>用户名：</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="lineEdit_username">
+      <property name="font">
+       <font>
+        <family>微软雅黑</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="placeholderText">
+       <string>请输入用户名</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>200</y>
+     <width>311</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_3">
+    <item>
+     <widget class="QLabel" name="label_2">
+      <property name="font">
+       <font>
+        <family>微软雅黑</family>
+        <pointsize>12</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 12pt &quot;微软雅黑&quot;;</string>
+      </property>
+      <property name="text">
+       <string>密   码：</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="lineEdit_password">
+      <property name="font">
+       <font>
+        <family>微软雅黑</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::Password</enum>
+      </property>
+      <property name="placeholderText">
+       <string>请输入密码</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <zorder>toolButton</zorder>
+  <zorder>layoutWidget</zorder>
+  <zorder>layoutWidget</zorder>
+  <zorder>buttonLogin</zorder>
+  <zorder>label_title</zorder>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonLogin</sender>
+   <signal>accepted()</signal>
+   <receiver>LoginDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonLogin</sender>
+   <signal>rejected()</signal>
+   <receiver>LoginDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

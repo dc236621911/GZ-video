@@ -1,0 +1,83 @@
+#include "shi_information.h"
+#include "ui_shi_information.h"
+#include <QDir>
+#include <QFile>
+#include <QDebug>
+#include <QMessageBox>
+#include <QTextCodec>
+#include "common_data.h"
+#include <QColor>
+#include <QFont>
+extern "C"
+{
+    #include "libavcodec/avcodec.h"
+    #include "libavformat/avformat.h"
+    #include "libswscale/swscale.h"
+    #include "libavdevice/avdevice.h"
+}
+
+Shi_information::Shi_information(QWidget *parent) :
+    QWidget(parent),
+    ui(new Ui::Shi_information)
+{
+    ui->setupUi(this);
+
+    //视频信息相关操作
+    qDebug()<<Common_data::xin_lujing;
+    //指定中文编码
+    QTextCodec *codec = QTextCodec::codecForName("GBK");
+    //ffmpeg初始化
+    av_register_all();
+    AVFormatContext *pFormatCtx = avformat_alloc_context();
+
+    ui->tableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);//根据内容宽度设置列宽
+    QDir shipin_dir(Common_data::xin_lujing);
+    if(shipin_dir.exists()){
+        int table_index=0;
+        QStringList file_a = shipin_dir.entryList();
+        ui->tableWidget->setRowCount(file_a.size()-2);//设置总行数
+        for(int i=0;i<file_a.size();i++){
+            QString file_dir_name = codec->toUnicode(file_a.at(i).toLocal8Bit().constData());
+            if(file_dir_name == "." || file_dir_name == ".."){
+                continue;
+            }
+
+            //qDebug()<<codec->toUnicode(file_a.at(i).toLocal8Bit().constData());
+            QString file_name_ = Common_data::xin_lujing+"/"+codec->toUnicode(file_a.at(i).toLocal8Bit().constData());
+            QTableWidgetItem *file_name = new QTableWidgetItem(file_name_);
+            ui->tableWidget->setItem(table_index,0,file_name);
+
+            QFile new_file(file_name_);
+            int file_size_ = new_file.size();
+            file_size_ = file_size_/1024/1024;
+            QString file_size_in = QString::number(file_size_,10);
+            qDebug()<<file_size_;
+            QTableWidgetItem *file_size = new QTableWidgetItem(file_size_in+" MB");
+            if(file_size_ == 0 || file_size_ < 100){
+                file_size->setTextColor(QColor("red"));
+                QFont font("Microsoft YaHei", 14, 75);
+                file_size->setFont(font);
+            }
+            ui->tableWidget->setItem(table_index,1,file_size);
+            table_index++;
+        }
+    }else{
+        QMessageBox::warning(this,tr("警告："),tr("视频目录不存在！"),QMessageBox::Yes);
+    }
+
+}
+
+Shi_information::~Shi_information()
+{
+    delete ui;
+}
+
+void Shi_information::setFatherWidget(MainWindow *f)
+{
+    this->father = f;
+}
+
+MainWindow* Shi_information::getFatherWidget()
+{
+    return this->father;
+}

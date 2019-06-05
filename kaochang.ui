@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>KaoChang</class>
+ <widget class="QWidget" name="KaoChang">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">font: 12pt &quot;阿里巴巴普惠体 R&quot;;</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <spacer name="horizontalSpacer_3">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>108</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="styleSheet">
+        <string notr="true">font: 75 14pt &quot;阿里巴巴普惠体 B&quot;;</string>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;通道-考场配置&lt;span style=&quot; color:red; vertical-align:sub;&quot;&gt;(考场号为转换过后的格式)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_4">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>108</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QTableWidget" name="tableWidget">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>1920</width>
+       <height>1080</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <family>阿里巴巴普惠体 B</family>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 75 10pt &quot;阿里巴巴普惠体 B&quot;;</string>
+     </property>
+     <attribute name="horizontalHeaderVisible">
+      <bool>true</bool>
+     </attribute>
+     <attribute name="horizontalHeaderDefaultSectionSize">
+      <number>100</number>
+     </attribute>
+     <attribute name="horizontalHeaderHighlightSections">
+      <bool>true</bool>
+     </attribute>
+     <attribute name="horizontalHeaderMinimumSectionSize">
+      <number>50</number>
+     </attribute>
+     <attribute name="horizontalHeaderStretchLastSection">
+      <bool>true</bool>
+     </attribute>
+     <attribute name="verticalHeaderVisible">
+      <bool>true</bool>
+     </attribute>
+     <attribute name="verticalHeaderMinimumSectionSize">
+      <number>30</number>
+     </attribute>
+     <column>
+      <property name="text">
+       <string>原视频路劲</string>
+      </property>
+      <property name="toolTip">
+       <string>对应相应通道</string>
+      </property>
+      <property name="font">
+       <font>
+        <family>阿里巴巴普惠体 B</family>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="background">
+       <color>
+        <red>239</red>
+        <green>239</green>
+        <blue>239</blue>
+       </color>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>考场编号</string>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="background">
+       <color>
+        <red>239</red>
+        <green>239</green>
+        <blue>239</blue>
+       </color>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>对应考场号（考场号后三位）</string>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="background">
+       <color>
+        <red>239</red>
+        <green>239</green>
+        <blue>239</blue>
+       </color>
+      </property>
+      <property name="foreground">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </property>
+     </column>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_5">
+     <item>
+      <spacer name="horizontalSpacer_6">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>221</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;阿里巴巴普惠体 M&quot;;</string>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;文件数量&lt;/span&gt;&lt;span style=&quot; font-size:12pt; color:#ff0000; vertical-align:sub;&quot;&gt;(为一堂考试后视频文件数量)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="textFormat">
+          <enum>Qt::RichText</enum>
+         </property>
+         <property name="margin">
+          <number>-16</number>
+         </property>
+         <property name="indent">
+          <number>5</number>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_5">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>28</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="one2duo1">
+         <property name="styleSheet">
+          <string notr="true">font: 11pt &quot;阿里巴巴普惠体 L&quot;;</string>
+         </property>
+         <property name="text">
+          <string>单文件</string>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">buttonGroup</string>
+         </attribute>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="oen2duo2">
+         <property name="styleSheet">
+          <string notr="true">font: 11pt &quot;阿里巴巴普惠体 L&quot;;</string>
+         </property>
+         <property name="text">
+          <string>多文件</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">buttonGroup</string>
+         </attribute>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_7">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <property name="topMargin">
+      <number>20</number>
+     </property>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>68</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 12pt &quot;阿里巴巴普惠体 M&quot;;</string>
+       </property>
+       <property name="text">
+        <string>保 存</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="font">
+        <font>
+         <family>阿里巴巴普惠体 R</family>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>标准化</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>88</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+ <buttongroups>
+  <buttongroup name="buttonGroup"/>
+ </buttongroups>
+</ui>
